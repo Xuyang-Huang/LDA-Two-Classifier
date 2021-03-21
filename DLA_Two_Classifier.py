@@ -10,8 +10,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
-iris_dataset=load_iris()
-class_num = len(iris_dataset['target_names'])-1
 
 
 class LDATwoClassifier:
@@ -36,7 +34,7 @@ class LDATwoClassifier:
         # Get sample means and scatters of each class.
         sample_mean = []
         scatters = np.zeros([dim, dim])
-        for label_index in range(class_num):
+        for label_index in range(2):
 
             # Means
             current_label_data = data[np.where(label == label_index)]
@@ -85,6 +83,7 @@ class LDATwoClassifier:
 
 
 def prepare_data():
+    iris_dataset = load_iris()
     label = iris_dataset['target']
     label = label[np.where(label < 2)]
     data = iris_dataset['data'][np.where(iris_dataset['target'] < 2)]
