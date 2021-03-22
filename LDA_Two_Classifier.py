@@ -2,7 +2,7 @@
 #@Time : 2021/3/21 15:33
 #@Author : HUANG XUYANG
 #@Email : xhuang032@e.ntu.edu.sg
-#@File : DLA_Two_Classifier.py
+#@File : LDA_Two_Classifier.py
 #@Software: PyCharm
 
 
